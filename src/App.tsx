@@ -19,10 +19,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/desconto" element={<Discounts />} />
-          <Route path="/telemedicina" element={<Telemedicine />} />
-          <Route path="/clube-medicamentos" element={<MedicineClub />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="/desconto" element={<Discounts />} /> */}
+          {/* <Route path="/telemedicina" element={<Telemedicine />} /> */}
+          {/* <Route path="/clube-medicamentos" element={<MedicineClub />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
