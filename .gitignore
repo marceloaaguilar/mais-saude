@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-src/pages/Discounts.tsx
-src/pages/MedicineClub.tsx
-src/pages/NotFound.tsx
-src/pages/Telemedicine.tsx
