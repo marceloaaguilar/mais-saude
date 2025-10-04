@@ -8,7 +8,7 @@ interface WhatsAppButtonProps {
 export default function WhatsAppButton() {
 
   let message = "Olá! Gostaria de mais informações.";
-  let phone = "5599999999999";
+  let phone = "5521920070815";
   const encodedMessage = message ? encodeURIComponent(message) : ""
   const url = `https://wa.me/${phone}${encodedMessage ? `?text=${encodedMessage}` : ""}`
 

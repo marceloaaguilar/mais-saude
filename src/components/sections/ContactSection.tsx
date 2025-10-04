@@ -28,7 +28,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(31) 99999-9999",
+      content: "(21) 92007-0815",
       description: "Segunda a Sexta, 8h às 18h"
     },
     {
@@ -40,14 +40,8 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      content: "Localização, Estado",
+      content: "Rua Cerqueira Daltro, 321 – Cascadura, Rio de Janeiro - RJ",
       description: "Atendimento em todo Brasil"
-    },
-    {
-      icon: Clock,
-      title: "Horário",
-      content: "24/7 Telemedicina",
-      description: "Emergências sempre disponíveis"
     }
   ];
 

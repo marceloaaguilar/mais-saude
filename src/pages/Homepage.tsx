@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import PlansSection from "@/components/sections/PlansSection";
 import ContactSection from "@/components/sections/ContactSection";
 import WhatsAppButton from "@/components/WhatsappBtn";
+import Simulation from "@/components/Simulation";
 
 const Homepage = () => {
   return (
@@ -13,7 +14,7 @@ const Homepage = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <PlansSection />
+        <Simulation/>
         <ContactSection />
         <WhatsAppButton/>
       </main>

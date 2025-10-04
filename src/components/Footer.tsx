@@ -41,20 +41,34 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Contato</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-primary-foreground/80">
+              <a
+                href="tel:+5521920070815"
+                className="flex items-center space-x-2 text-primary-foreground/80 px-3 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition"
+              >
                 <Phone size={16} />
-                <span className="text-sm">(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center space-x-2 text-primary-foreground/80">
+                <span className="text-sm">(21) 92007-0815</span>
+              </a>
+
+              <a
+                href="mailto:contato@maissaude.com.br"
+                className="flex items-center space-x-2 text-primary-foreground/80 px-3 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition"
+              >
                 <Mail size={16} />
                 <span className="text-sm">contato@maissaude.com.br</span>
-              </div>
-              <div className="flex items-center space-x-2 text-primary-foreground/80">
+              </a>
+
+              <a
+                href="https://www.google.com/maps?q=Rua+Cerqueira+Daltro,+321,+Cascadura,+Rio+de+Janeiro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-primary-foreground/80 px-3 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition"
+              >
                 <MapPin size={16} />
-                <span className="text-sm">Localização, Estado</span>
-              </div>
+                <span className="text-sm">Rua Cerqueira Daltro, 321 – Cascadura, Rio de Janeiro - RJ</span>
+              </a>
             </div>
           </div>
+
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
