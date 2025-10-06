@@ -195,28 +195,47 @@ const Telemedicine = () => {
           </div>
         </section>
         
-        <section className="py-24 bg-muted flex flex-col justify-center items-center">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-12">
+        <section className="py-24 bg-muted flex justify-center items-center">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-foreground text-center mb-12">
               Especialidades por Agendamento
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {specialties.map((spec, index) => (
-                <div
-                  key={index}
-                  className="bg-white text-foreground rounded-xl shadow-sm border hover:shadow-md transition-all duration-200 flex items-center justify-center text-center font-medium h-24 w-full"
-                >
-                  <span className="px-4">{spec}</span>
-                </div>
-              ))}
-            </div>
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
 
-            <p className="text-lg text-muted-foreground mt-12">
-              Saúde sempre ao alcance das suas mãos.
-            </p>
+              <div className="w-full lg:w-1/3 flex justify-center">
+                <img
+                  src="/imgMedico.jpg" 
+                  alt="Médico atendendo paciente"
+                  className="rounded-2xl shadow-md object-cover w-full max-w-sm lg:h-full"
+                />
+              </div>
+
+ 
+              <div className="w-full lg:w-2/3 text-center flex flex-col justify-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3">
+                  {specialties.map((spec, index) => (
+                    <div
+                      key={index}
+                      className="bg-white text-foreground rounded-lg shadow-sm border hover:shadow-md transition-all duration-200 flex items-center justify-center text-center font-medium h-16 w-full text-sm"
+                    >
+                      <span className="px-2">{spec}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-lg text-muted-foreground mt-10">
+                  Saúde sempre ao alcance das suas mãos.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
+
+
+
+
+
       </main>
 
       <Footer />
