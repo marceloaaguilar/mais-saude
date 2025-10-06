@@ -6,18 +6,16 @@ import { scrollToElement } from "@/lib/utils";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Fundo com imagem desfocada e viva */}
       <div className="absolute inset-0">
         <img 
           src={familyBanner} 
           alt="Família feliz recebendo cuidados de saúde"
           className="w-full h-full object-cover blur-sm brightness-110 contrast-110 saturate-120 scale-105 transition-transform duration-[3000ms] ease-out"
         />
-        {/* Gradiente leve para reforçar contraste com o texto */}
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/10"></div>
       </div>
 
-      {/* Conteúdo sobreposto */}
       <div className="relative z-10 container mx-auto px-6 pt-24 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 px-4 md:px-8">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in">
@@ -35,8 +33,8 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-fade-in-delay">
             <Button 
               size="lg"
-              onClick={() => scrollToElement('secaoPlanos')}
-              className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6 transition-all duration-300"
+              onClick={() => scrollToElement('planos')}
+              className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6"
             >
               Ver Nossos Planos
               <ArrowRight className="ml-2" size={20} />

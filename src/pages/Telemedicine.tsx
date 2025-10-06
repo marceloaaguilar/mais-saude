@@ -2,19 +2,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Video, 
   Clock, 
   Shield, 
-  Smartphone, 
-  Calendar, 
-  MessageCircle,
-  Stethoscope,
-  FileText,
+  Smartphone,
+  Heart,
   Users
 } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsappBtn";
+import ScrollToSectionButton from "@/components/ScrollToSectionButton";
 
 const Telemedicine = () => {
   const features = [
@@ -41,47 +38,30 @@ const Telemedicine = () => {
   ];
 
   const specialties = [
-    "Clínica Geral",
-    "Pediatria",
-    "Ginecologia",
     "Cardiologia",
-    "Dermatologia",
-    "Psicologia",
+    "Clínica Médica",
+    "Dermatologista",
+    "Endocrinologista e Metabologia",
+    "Gastroenterologia",
+    "Geriatria",
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade",
+    "Nutrologia",
+    "Ortopedia e Traumatologia",
+    "Otorrinolaringologia",
+    "Pediatria",
+    "Psiquiatria",
+    "Urologia",
+    "Psicologia (Consulta)",
     "Nutrição",
-    "Endocrinologia",
-    "Infectologia",
-    "Geriatria"
-  ];
-
-  const steps = [
-    {
-      icon: Calendar,
-      title: "Escolha seu Plano",
-      description: "Selecione o plano que inclui telemedicina"
-    },
-    {
-      icon: MessageCircle,
-      title: "Receba o Link",
-      description: "Você receberá um link seguro por SMS ou email"
-    },
-    {
-      icon: Video,
-      title: "Faça sua Consulta",
-      description: "Converse com o médico por vídeo no horário agendado"
-    },
-    {
-      icon: FileText,
-      title: "Receba a Receita",
-      description: "Prescrições digitais válidas em todo território nacional"
-    }
+    "Nutrólogo Pediátrico"
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
-      
       <WhatsAppButton/>
-      
+
       <main className="pt-16">
         <section className="relative py-32">
           <div className="absolute inset-0">
@@ -100,12 +80,24 @@ const Telemedicine = () => {
             <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
               Consulte médicos especialistas de qualquer lugar, a qualquer hora. Atendimento rápido, seguro e eficiente para toda sua família.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
-            >
-              Ver Planos
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="lg"
+                className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6"
+                onClick={() => window.open('https://seuhotsite.com', '_blank')}
+              >
+                Acessar Benefício
+              </Button>
+              
+              <ScrollToSectionButton sectionId="planos">
+                <Button 
+                  size="lg"
+                  className="text-primary bg-white hover:bg-primary hover:text-white text-lg px-8 py-6 transition-all duration-300"
+                >
+                  Contratar
+                </Button>
+              </ScrollToSectionButton>
+            </div>
           </div>
         </section>
 
@@ -135,6 +127,96 @@ const Telemedicine = () => {
           </div>
         </section>
 
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+              Com a Telemedicina Mais Saúde
+            </h2>
+            <p className="text-lg text-center text-gray-700 mb-16">
+              Acesso prático e imediato a consultas médicas online, sem burocracia e com total segurança.
+            </p>
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-start gap-4 transition">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Clock className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Atendimento rápido</h3>
+                <p className="text-gray-600">
+                  Consultas imediatas com médicos de diversas especialidades, sem filas ou espera.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-start gap-4 transition">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Smartphone className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Consultas Online</h3>
+                <p className="text-gray-600">
+                  Realize consultas pelo celular ou computador, de onde você estiver.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-start gap-4 transition">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Shield className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Segurança</h3>
+                <p className="text-gray-600">
+                  Proteção total dos seus dados médicos com plataforma criptografada.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-start gap-4 transition">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Users className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Especialidades disponíveis</h3>
+                <p className="text-gray-600">
+                  Plantão clínico geral, pediatria e especialistas de acordo com a agenda.
+                </p>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-start gap-4 transition">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Heart className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Cuidado contínuo</h3>
+                <p className="text-gray-600">
+                  Suporte completo para garantir mais saúde no dia a dia da sua família.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-24 bg-muted flex flex-col justify-center items-center">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold text-foreground mb-12">
+              Especialidades por Agendamento
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {specialties.map((spec, index) => (
+                <div
+                  key={index}
+                  className="bg-white text-foreground rounded-xl shadow-sm border hover:shadow-md transition-all duration-200 flex items-center justify-center text-center font-medium h-24 w-full"
+                >
+                  <span className="px-4">{spec}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-lg text-muted-foreground mt-12">
+              Saúde sempre ao alcance das suas mãos.
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />

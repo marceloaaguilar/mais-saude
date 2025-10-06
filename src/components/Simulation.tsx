@@ -115,10 +115,9 @@ export default function Simulation(): JSX.Element {
       : null;
 
   return (
-    <div className="pb-10 flex justify-center" id="secaoPlanos">
+    <div className="pb-10 flex justify-center" id="planos">
       <div className="w-full max-w-6xl mx-4 bg-white border rounded-lg px-6 py-6 shadow-sm">
         <div className="flex flex-col items-center text-center gap-4">
-          {/* Título */}
           <div className="flex flex-col sm:flex-row items-center gap-2 text-2xl font-bold">
             <h3 className="text-custom-blue">Nossos</h3>
             <h3 className="text-primary">Planos</h3>
@@ -135,7 +134,6 @@ export default function Simulation(): JSX.Element {
             <p className="text-primary text-sm sm:text-base">por mês</p>
           </div>
 
-          {/* Tipo de plano */}
           <div className="flex gap-2 mt-4">
             {(["individual", "familia"] as TipoPlano[]).map((tipo) => (
               <button
@@ -158,7 +156,6 @@ export default function Simulation(): JSX.Element {
             ))}
           </div>
 
-          {/* Planos individuais */}
           {tipoPlano === "individual" && (
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 my-4">
               {planos.individual.map((p) => (
@@ -179,7 +176,6 @@ export default function Simulation(): JSX.Element {
             </div>
           )}
 
-          {/* Planos família */}
           {tipoPlano === "familia" && (
             <div className="w-full grid grid-cols-2 gap-3 my-4">
               {planos.familia.planosBase.map((p) => (
@@ -200,7 +196,6 @@ export default function Simulation(): JSX.Element {
             </div>
           )}
 
-          {/* Benefícios */}
           {planoSelecionado && (
             <div className="bg-primary/5 border border-primary/30 rounded-lg p-4 text-left w-full max-w-3xl">
               {tipoPlano === "individual" && planoAtual && "beneficios" in planoAtual && (
@@ -223,7 +218,6 @@ export default function Simulation(): JSX.Element {
             </div>
           )}
 
-          {/* Dependentes + CTA */}
           {tipoPlano === "familia" && (
             <div className="w-full flex flex-col lg:flex-row gap-3 items-stretch">
               <div className="flex-1 flex flex-col gap-3">

@@ -3,122 +3,44 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { scrollToElement } from "@/lib/utils";
-
-import { FaWhatsapp } from "react-icons/fa";
-
-
+import WhatsAppButton from "@/components/WhatsappBtn";
+import ScrollToSectionButton from "@/components/ScrollToSectionButton";
 
 import { 
-  Pill, 
   Percent, 
   Truck, 
   Shield, 
   Smartphone, 
-  Heart,
-  Star,
   CheckCircle,
   Package,
-  CreditCard
+  CreditCard,
+  MessageCircle,
+  FileText,
+  CalendarCheck,
+  Handshake
 } from "lucide-react";
-import WhatsAppButton from "@/components/WhatsappBtn";
 
 const MedicineClub = () => {
   const benefits = [
     {
       icon: Percent,
       title: "Preços Acessíveis",
-      description: "Os maiores descontos em medicamentos do mercado"
+      description: "Os maiores descontos em medicamentos do mercado."
     },
     {
       icon: Truck,
       title: "Receba seu medicamento em casa",
-      description: "Receba seus medicamentos em casa sem taxa de entrega"
+      description: "Receba seus medicamentos sem taxa de entrega."
     },
     {
       icon: Shield,
       title: "Medicamentos Originais",
-      description: "Garantia de qualidade e procedência dos produtos"
+      description: "Garantia de qualidade e procedência dos produtos."
     },
     {
       icon: Smartphone,
-      title: "Compre Pelo Whatsapp",
-      description: "Faça seus pedidos a qualquer hora do dia pelo Whatsapp"
-    }
-  ];
-
-  const categories = [
-    {
-      name: "Medicamentos Genéricos",
-      discount: "Até 80% OFF",
-      description: "Versões genéricas com a mesma eficácia",
-      icon: Pill,
-      color: "bg-gradient-primary"
-    },
-    {
-      name: "Medicamentos de Marca",
-      discount: "Até 60% OFF",
-      description: "Medicamentos de laboratórios renomados",
-      icon: Star,
-      color: "bg-gradient-secondary"
-    },
-    {
-      name: "Vitaminas e Suplementos",
-      discount: "Até 50% OFF",
-      description: "Suplementação para sua saúde e bem-estar",
-      icon: Heart,
-      color: "bg-gradient-primary"
-    },
-    {
-      name: "Medicamentos Controlados",
-      discount: "Até 40% OFF",
-      description: "Com receita médica e entrega segura",
-      icon: Shield,
-      color: "bg-gradient-secondary"
-    }
-  ];
-
-  const featuredMedicines = [
-    {
-      name: "Dipirona 500mg",
-      originalPrice: "R$ 15,90",
-      clubPrice: "R$ 3,20",
-      discount: "80% OFF",
-      category: "Analgésico"
-    },
-    {
-      name: "Omeprazol 20mg",
-      originalPrice: "R$ 45,00",
-      clubPrice: "R$ 9,00",
-      discount: "80% OFF",
-      category: "Gastroprotetor"
-    },
-    {
-      name: "Losartana 50mg",
-      originalPrice: "R$ 35,00",
-      clubPrice: "R$ 7,00",
-      discount: "80% OFF",
-      category: "Anti-hipertensivo"
-    },
-    {
-      name: "Sinvastatina 20mg",
-      originalPrice: "R$ 28,00",
-      clubPrice: "R$ 5,60",
-      discount: "80% OFF",
-      category: "Colesterol"
-    },
-    {
-      name: "Metformina 850mg",
-      originalPrice: "R$ 22,00",
-      clubPrice: "R$ 4,40",
-      discount: "80% OFF",
-      category: "Diabetes"
-    },
-    {
-      name: "Atenolol 25mg",
-      originalPrice: "R$ 18,00",
-      clubPrice: "R$ 3,60",
-      discount: "80% OFF",
-      category: "Cardíaco"
+      title: "Compre Pelo WhatsApp",
+      description: "Faça seus pedidos a qualquer hora do dia."
     }
   ];
 
@@ -126,34 +48,32 @@ const MedicineClub = () => {
     {
       icon: CreditCard,
       title: "Assine o Clube",
-      description: "Escolha o plano mensal ou anual que melhor se adequa a você"
+      description: "Escolha o plano mensal ou anual que melhor se adequa a você."
     },
     {
       icon: Package,
       title: "Escolha seus Medicamentos",
-      description: "Navegue pelo catálogo e encontre os medicamentos que precisa"
+      description: "Navegue pelo catálogo e encontre o que precisa."
     },
     {
       icon: Truck,
       title: "Receba em Casa",
-      description: "Entrega rápida e gratuita direto na sua porta"
+      description: "Entrega rápida e gratuita direto na sua porta."
     },
     {
       icon: CheckCircle,
       title: "Economize Sempre",
-      description: "Descontos automáticos em todos os seus pedidos"
+      description: "Descontos automáticos em todos os seus pedidos."
     }
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
-      
       <main className="pt-16">
-        
-        <WhatsAppButton/>
+        <WhatsAppButton />
 
-        <section className="relative py-32">
+        <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src="/imgMedicamentos.jpg"
@@ -165,24 +85,121 @@ const MedicineClub = () => {
 
           <div className="relative z-10 container mx-auto px-6 flex flex-col items-start text-left text-white max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Clube de  <span className="block">Medicamentos</span>
+              Clube de <span className="block">Medicamentos</span>
             </h1>
             <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
               O seu medicamento de forma ágil e prática em um só lugar.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
-              onClick={()=> scrollToElement("vantagensDoClube")}
-            >
-              Quero Conhecer
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="lg"
+                className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6"
+                onClick={() => window.open('https://seuhotsite.com', '_blank')}
+              >
+                Acessar Benefício
+              </Button>
+              
+              <ScrollToSectionButton sectionId="planos">
+                <Button 
+                  size="lg"
+                  className="text-primary bg-white hover:bg-primary hover:text-white text-lg px-8 py-6 transition-all duration-300"
+                >
+                  Contratar
+                </Button>
+              </ScrollToSectionButton>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="conhecaNossoClube" className="py-24 bg-muted/30">
+          <div className="container mx-auto px-6 text-center max-w-4xl animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-6">Conheça Nosso Clube</h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Medicamentos com os preços mais acessíveis do Brasil!
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Nossa missão é melhorar a saúde e o bem-estar de todos, proporcionando 
+              economia nos cuidados médicos e simplificando o dia a dia. 
+              O Clube é a solução que facilita o acesso a tratamentos de qualidade, 
+              promovendo uma comunidade mais saudável e feliz.
+            </p>
+            <div className="mt-10">
+              <Button
+                size="lg"
+                className="bg-gradient-primary text-primary-foreground hover:opacity-90 px-8 py-6"
+                onClick={() => scrollToElement("vantagensDoClube")}
+              >
+                Ver Vantagens
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-5 bg-white from-primary via-primary/90 to-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-primary mb-12">
+              Como Funciona?
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+
+              <div className="bg-primary text-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center transition-transform hover:scale-105">
+                <div className="mb-6">
+                  <MessageCircle size={64} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Como fazer pedido?</h3>
+                <p className="text-sm leading-relaxed">
+                  Faça o seu pedido pelo nosso número de WhatsApp.
+                </p>
+              </div>
+
+              <div className="bg-white text-primary border border-primary rounded-lg shadow-lg p-8 flex flex-col items-center text-center transition-transform hover:scale-105">
+                <div className="mb-6">
+                  <FileText size={64} strokeWidth={1.5} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Solicitar orçamento</h3>
+                <p className="text-sm leading-relaxed">
+                  Solicite orçamento pelo nosso WhatsApp.
+                </p>
+              </div>
+
+              <div className="bg-secondary text-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center transition-transform hover:scale-105">
+                <div className="mb-6">
+                  <CreditCard size={64} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Faça seu pagamento</h3>
+                <p className="text-sm leading-relaxed">
+                  Após escolher os medicamentos, será enviado um link para pagamento.
+                </p>
+              </div>
+
+              <div className="bg-white text-primary border border-primary rounded-lg shadow-lg p-8 flex flex-col items-center text-center transition-transform hover:scale-105">
+                <div className="mb-6">
+                  <CalendarCheck size={64} strokeWidth={1.5} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Entrega Agendada</h3>
+                <p className="text-sm leading-relaxed">
+                  Nossa equipe irá informar a data de entrega.
+                </p>
+              </div>
+
+              <div className="bg-primary text-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center transition-transform hover:scale-105">
+                <div className="mb-6">
+                  <Handshake size={64} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Entrega realizada</h3>
+                <p className="text-sm leading-relaxed">
+                  Pronto, você receberá no conforto da sua casa os medicamentos solicitados.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="py-20 bg-background" id="vantagensDoClube">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-4xl font-bold text-center mb-12">
               Vantagens do Clube
             </h2>
             
@@ -190,16 +207,15 @@ const MedicineClub = () => {
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
                 return (
-                  <Card key={index} className="p-6 text-center shadow-soft hover:shadow-card transition-all duration-300">
+                  <Card 
+                    key={index} 
+                    className="p-6 text-center shadow-soft hover:shadow-card transition-all duration-300 bg-card"
+                  >
                     <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
                       <Icon className="text-primary-foreground" size={24} />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-4">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {benefit.description}
-                    </p>
+                    <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                    <p className="text-muted-foreground">{benefit.description}</p>
                   </Card>
                 );
               })}
@@ -207,121 +223,7 @@ const MedicineClub = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-              Como Funciona
-            </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {howItWorks.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div key={index} className="text-center relative">
-                    {index < howItWorks.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-border transform translate-x-4 -translate-y-1/2"></div>
-                    )}
-                    
-                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-secondary rounded-full flex items-center justify-center relative z-10">
-                      <Icon className="text-secondary-foreground" size={24} />
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-foreground mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {step.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-              Planos do Clube
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="p-8 shadow-soft hover:shadow-card transition-all duration-300">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Plano Mensal
-                </h3>
-                <div className="text-4xl font-bold text-primary mb-6">
-                  R$ 19,90<span className="text-lg text-muted-foreground">/mês</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Descontos de até 80%</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Entrega grátis ilimitada</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Acesso a 10.000+ medicamentos</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Suporte 24/7</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-gradient-primary hover:opacity-90">
-                  Assinar Mensal
-                </Button>
-              </Card>
-
-              <Card className="p-8 shadow-card border-2 border-primary relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gradient-secondary text-secondary-foreground">
-                    Mais Popular
-                  </Badge>
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Plano Anual
-                </h3>
-                <div className="text-4xl font-bold text-primary mb-2">
-                  R$ 15,90<span className="text-lg text-muted-foreground">/mês</span>
-                </div>
-                <div className="text-muted-foreground mb-6">
-                  Pago anualmente R$ 190,80 (20% desconto)
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Descontos de até 80%</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Entrega grátis ilimitada</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Acesso a 10.000+ medicamentos</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-primary" size={16} />
-                    <span>Suporte prioritário 24/7</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="text-secondary" size={16} />
-                    <span>Economize R$ 48,00 por ano</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-gradient-secondary hover:opacity-90">
-                  Assinar Anual
-                </Button>
-              </Card>
-            </div>
-          </div>
-        </section> */}
       </main>
-
       <Footer />
     </div>
   );

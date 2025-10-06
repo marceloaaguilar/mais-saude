@@ -8,6 +8,7 @@ import DiscountsPage from "./pages/Discounts";
 import Telemedicine from "./pages/Telemedicine";
 import MedicineClub from "./pages/MedicineClub";
 import NotFound from "./pages/NotFound";
+import FuneralPage from "./pages/FuneralPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/desconto" element={<DiscountsPage />} />
           <Route path="/telemedicina" element={<Telemedicine />} />
           <Route path="/clube-medicamentos" element={<MedicineClub />} />
+          <Route path="/funeral" element={<FuneralPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
