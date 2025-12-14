@@ -64,11 +64,11 @@ const Footer = () => {
               </a>
 
               <a
-                href="mailto:contato@maissaude.com.br"
+                href="mailto:contato@assistenciamaissaude.com.br"
                 className="flex items-center justify-center md:justify-start space-x-2 text-primary-foreground/80 px-3 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition"
               >
                 <Mail size={16} />
-                <span className="text-sm">contato@maissaude.com.br</span>
+                <span className="text-sm">contato@assistenciamaissaude.com.br</span>
               </a>
 
               <a
