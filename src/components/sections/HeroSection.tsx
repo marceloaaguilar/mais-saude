@@ -36,7 +36,7 @@ const HeroSection = () => {
               onClick={() => scrollToElement('planos')}
               className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6"
             >
-              Ver Nossos Planos
+              Veja Nossos Planos
               <ArrowRight className="ml-2" size={20} />
             </Button>
             <Button 
