@@ -34,7 +34,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "contato@maissaude.com.br",
+      content: "contato@assistenciamaissaude.com.br",
       description: "Resposta em até 24h"
     },
     {
