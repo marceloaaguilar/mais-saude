@@ -13,6 +13,7 @@ const Header = () => {
     { href: "/#planos", label: "Planos" },
     { href: "/telemedicina", label: "Telemedicina" },
     { href: "/clube-medicamentos", label: "Clube de Medicamentos" },
+    { href: "/consultas-presenciais", label: "Consultas Presenciais" },
     { href: "/funeral", label: "Funeral" }
   ];
 
@@ -76,7 +77,6 @@ const Header = () => {
         )}
       </div>
     </header>
-
   );
 };
 

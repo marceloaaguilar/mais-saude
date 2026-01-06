@@ -25,12 +25,12 @@ export default function DiscountsPage() {
             São mais de <strong>30.000 parceiros</strong> em todo o Brasil, garantindo benefícios exclusivos e preços imbatíveis.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center mb-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center mb-14">
             {[
               'hoteis', 'raia', 'cocobambu', 'toca', 'vivara', 
               'dominos', 'petz', 'kinoplex', 'uci', 
               'cinesystem', 'cinemark', 'zedelivery', 'netshoes', 
-              'unidas', 'estacio'
+              'unidas', 'estacio', 'bronstein'
             ].map((logo, index) => (
               <div 
                 key={index} 
@@ -82,7 +82,6 @@ export default function DiscountsPage() {
           </div>
         </div>
       </section>
-
 
       <Footer/>
 

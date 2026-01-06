@@ -147,7 +147,6 @@ export default function FuneralPage() {
         </div>
       </section>
 
-
       <Footer />
   </>
 

@@ -9,6 +9,7 @@ import Telemedicine from "./pages/Telemedicine";
 import MedicineClub from "./pages/MedicineClub";
 import NotFound from "./pages/NotFound";
 import FuneralPage from "./pages/FuneralPage";
+import InPersonConsultations from "./pages/InPersonConsultations";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/telemedicina" element={<Telemedicine />} />
           <Route path="/clube-medicamentos" element={<MedicineClub />} />
           <Route path="/funeral" element={<FuneralPage />} />
+          <Route path="/consultas-presenciais" element={<InPersonConsultations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
