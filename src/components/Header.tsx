@@ -9,8 +9,8 @@ const Header = () => {
 
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "/desconto", label: "Descontos" },
     { href: "/#planos", label: "Planos" },
+    { href: "/desconto", label: "Clube Descontos" },
     { href: "/telemedicina", label: "Telemedicina" },
     { href: "/clube-medicamentos", label: "Clube de Medicamentos" },
     { href: "/consultas-presenciais", label: "Consultas Presenciais" },

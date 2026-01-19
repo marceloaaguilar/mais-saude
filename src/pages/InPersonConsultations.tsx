@@ -55,7 +55,7 @@ export default function InPersonConsultations() {
                 )
               }
             >
-              Agendar Agora
+              Contratar Plano
             </Button>
           </div>
         </div>
@@ -150,6 +150,21 @@ export default function InPersonConsultations() {
           </div>
         </div>
       </section>
+
+      <div className="flex justify-center mb-10">
+        <Button
+          size="lg"
+          className="bg-primary text-white hover:bg-white/90 hover:text-primary shadow-soft text-lg px-8 py-6"
+          onClick={() =>
+            window.open(
+              "https://api.whatsapp.com/send?phone=554497113488&text=Ol%C3%A1%20gostaria%20de%20agendar%20uma%20consulta%20presencial",
+              "_blank"
+            )
+          }
+        >
+          Contratar Plano
+        </Button>
+      </div>
       
       <Footer/>
     </>
